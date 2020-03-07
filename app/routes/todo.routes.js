@@ -4,6 +4,9 @@ module.exports = (app) => {
     //create a new todo item with
     app.post('/todos', todos.create);
 
+    // retrieve a single note with todo id
+    app.get('/todos/:todoId', todos.findOne);
+
     // retrieve all todos
     app.get('/todos', todos.findAll);
 
